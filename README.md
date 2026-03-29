@@ -1,16 +1,110 @@
-# React + Vite
+ # 🎮 Tic Tac Toe (React + AI)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive **Tic Tac Toe game** built with React, featuring **Single Player (AI)** and **Multiplayer modes**, smooth UI, sound effects, and deployment on GitHub Pages.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+👉 https://aman01246.github.io/tic-tac-toe/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 🎯 **Single Player Mode (AI)**
+
+  * Uses **Minimax Algorithm** for unbeatable gameplay
+* 👥 **Multiplayer Mode**
+
+  * Play with a friend on the same device
+* 🔊 **Sound Effects**
+
+  * Click, Win, and Draw sounds
+  * Mute / Unmute support
+* 🎨 **Modern UI**
+
+  * Glassmorphism design
+  * Smooth hover & animations
+* 📱 **Responsive Design**
+
+  * Works on mobile, tablet, and desktop
+* 🏆 **Score Tracking**
+
+  * Player vs Computer vs Draw count
+* 🎬 **Animated Background**
+
+  * Subtle neon-style motion effects
+
+---
+
+## 🧠 Tech Stack
+
+* ⚛️ React (Vite)
+* 🎨 CSS3 (Responsive + Glass UI)
+* 🤖 Minimax Algorithm (AI logic)
+* 🎞 GSAP (Background animation)
+* 🔊 HTML5 Audio API
+* 🌐 GitHub Pages (Deployment)
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+ ├── components/
+ │   ├── Board.jsx
+ │   ├── Square.jsx
+ │   ├── Status.jsx
+ │   ├── ModeSelector.jsx
+ │   ├── MuteButton.jsx
+ │
+ ├── hooks/
+ │   └── useGame.js
+ │
+ ├── utils/
+ │   ├── checkWinner.js
+ │   ├── minimax.js
+ │   ├── gameHelpers.js
+ │
+ ├── services/
+ │   └── soundService.js
+ │
+ ├── App.jsx
+ └── main.jsx
+
+public/
+ ├── click.mp3
+ ├── win.wav
+ ├── draw.wav
+```
+
+---
+
+## 🎮 How to Play
+
+* Choose **Single Player** or **Multiplayer**
+* Click on any square to place your move
+* First to align 3 marks wins
+* AI will respond automatically in single-player mode
+
+---
+
+## 🔮 Future Improvements
+
+* 🎉 Win popup / animations
+* 🧠 Difficulty levels (Easy / Medium / Hard)
+* 🌐 Online multiplayer (Socket.io)
+* 📲 PWA support (installable app)
+
+---
+
+## 👨‍💻 Author
+
+**Aman Kumar**
+
+* GitHub: https://github.com/aman01246
+
+---
+
