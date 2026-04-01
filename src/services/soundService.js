@@ -1,31 +1,46 @@
-const clickSound = new Audio("/click.mp3");
-const winSound = new Audio("/win.wav");
-const drawSound = new Audio("/draw.wav");
+const base = import.meta.env.BASE_URL;
 
-let isMuted = false; // 🔇 global control
+function createSound(file) {
+  try {
+    return new Audio(base + file);
+  } catch {
+    return null;
+  }
+}
 
-// 🎛 Toggle mute
+const clickSound = createSound("click.mp3");
+const winSound = createSound("win.wav");
+const drawSound = createSound("draw.wav");
+
+let isMuted = false;
+
+// 🔇 toggle
 export function toggleMute() {
   isMuted = !isMuted;
 }
 
-// 📊 Get current state
 export function getMuteState() {
   return isMuted;
 }
 
-// 🔊 Play sounds safely
+// 🔊 SAFE PLAY
+function safePlay(sound) {
+  if (isMuted || !sound) return;
+
+  try {
+    sound.currentTime = 0;
+    sound.play().catch(() => {}); // prevent crash
+  } catch {console.log("Sound error")}
+}
+
 export function playClick() {
-  if (isMuted) return;
- clickSound.play();
+  safePlay(clickSound);
 }
 
 export function playWin() {
-  if (isMuted) return;
-  winSound.play();
+  safePlay(winSound);
 }
 
 export function playDraw() {
-  if (isMuted) return;
-  drawSound.play();
+  safePlay(drawSound);
 }

@@ -20,6 +20,18 @@ export function getBestMove(board) {
   return move;
 }
 
+// 🎲 EASY / MEDIUM SUPPORT
+export function getRandomMove(board) {
+  const emptyCells = board
+    .map((val, i) => (val === null ? i : null))
+    .filter(i => i !== null);
+
+  if (emptyCells.length === 0) return null;
+
+  return emptyCells[Math.floor(Math.random() * emptyCells.length)];
+}
+
+// 🧠 MINIMAX
 function minimax(board, depth, isMaximizing) {
   const result = checkWinner(board);
 
