@@ -2,13 +2,13 @@
 
 A modern, responsive **Tic Tac Toe game** built with React, featuring **Single Player (AI)** and **Multiplayer modes**, smooth UI, sound effects, and deployment on GitHub Pages.
 
----
+---------------------------------
 
 ## 🚀 Live Demo
 
 👉 https://aman01246.github.io/tic-tac-toe/
 
----
+-----------------------------------
 
 ## ✨ Features
 
